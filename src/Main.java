@@ -4,10 +4,14 @@ public class Main {
         System.out.println("Залание 1");
         System.out.println();
             checkLeapYear();
-                System.out.println();
+            System.out.println();
         System.out.println("Залание 2");
         System.out.println();
         getClientOS();
+        System.out.println();
+        System.out.println("Залание 3");
+        System.out.println();
+        calculateDeliveryDistance();
 
     }
     public static void checkLeapYear () {
@@ -35,5 +39,15 @@ public class Main {
             System.out.println("Установите полную версию приложения для IOS по ссылке");
         }
 
+    }
+    public static void calculateDeliveryDistance() {
+        int deliveryDistance = 17;
+        if (deliveryDistance < 20) {
+            System.out.println("Потребуется 1 день");
+        }else if (deliveryDistance < 60) {
+            System.out.println("Потребуется 2 дня");
+        }else{
+            System.out.println("Потребуется 3 дня");
+        }
     }
 }
