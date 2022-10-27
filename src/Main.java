@@ -13,7 +13,8 @@ public class Main {
 
         System.out.println("Залание 3");
         System.out.println();
-        calculateDeliveryDays(102);
+        System.out.println(calculateDeliveryDays(101));
+
     }
     public static void printLeapYear(int year) {
         boolean leapYear = isLeapYear(year);
@@ -31,8 +32,6 @@ public class Main {
         }
     }
 
-
-
     public static void getClientOS(int clientOS,int currentYear) {
 
         if (clientOS == 1 && currentYear >= 2015) {
@@ -47,16 +46,19 @@ public class Main {
         }
 
     }
-    public static void calculateDeliveryDays(int deliveryDistance) {
+
+    public static String calculateDeliveryDays(int deliveryDistance) {
+        String message = "";
         int deliveryDays = 1;
         if (deliveryDistance > 20) {
             deliveryDays++;
         }
         if (deliveryDistance > 60 && deliveryDistance <= 100) {
-                deliveryDays++;
-        }else{
-            System.out.println("Не возможно расчитать срок доставки");
+            deliveryDays++;
+        } else if (deliveryDistance > 100) {
+            return "Невозможно расчитать срок доставки";
         }
-                System.out.println("Потребуется дней: " +deliveryDays);
-            }
+        return "Потребуется дней: " + deliveryDays;
+    }
+
     }
